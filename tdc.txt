@@ -1,0 +1,92 @@
+
+Descripiones de comandos
+
+* --help
+
+* man: es como un tipo de manual de usuario.
+
+* info: es algo similar al comando "man", sino que de manera mas resumida y difiere su interfaz.
+
+*whatis: da una descripcion muy corta de que es el comando.
+
+examples:
+
+ls --help
+
+man cd
+
+info cd
+
+whatis cd
+
+
+como crear alias?
+R= 
+    alias (nombre del alias)="(el comando al que le vamos a agregar el alias)";
+
+
+    Wildcards
+
+1. *
+2. ?
+3. [[:upper:]]*
+4. [[:lower:]]*
+5. []*
+
+example:
+
+touch file.txt dot.txt dot2.txt index.html datos1 datos123 abc
+
+ls *.txt
+dot2.txt dot.txt file.txt
+
+ls datos*
+datos1 datos123
+
+
+ls datos?
+datos1
+
+ls datos???
+datos123
+
+
+ls -d [[:upper:]]*
+(todos los que comiencen con mayuscula y que tenga una sucesion de caracter o caracteres)
+
+-d: solo busca los directorios.
+
+ls -d [[:lower:]]*
+(funciona igual que el upper pero con los directorios que empiecen con minuscula)
+
+
+ls [ad]*
+abc datos1 datos123 dot2.txt dot.txt
+
+
+Redirecciones:pipe operator
+
+echo "hello ernesto"
+hello ernesto
+
+
+unir cadenas de texto (cat)
+
+ls ./pictures > pictures.txt
+
+ls ./videos > videos.txt
+
+cat pictures.txt videos.txt
+
+
+Crear un archivo con base en una salida (tree)
+
+cat pictures.txt videos.txt | tee archivos.txt
+
+
+
+
+
+
+
+
